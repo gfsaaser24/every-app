@@ -80,8 +80,6 @@ jobs:
               echo "::warning::$name is not a repository secret; the apps that need it show Needs setup."
             fi
           done
-          # OpenScribe's Mac app mints OpenAI Realtime sessions through the Gateway.
-          echo "/v1/realtime/client_secrets" | pnpm everyapp secret set AI_PROXY_EXTRA_ROUTES
 
       - name: Install the apps
         run: |
